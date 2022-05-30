@@ -1,11 +1,9 @@
 import useLetras from "../hooks/useLetras"
 
 const Letra = () => {
-  const {letra} = useLetras()
+  const {letra, cargando} = useLetras()
   return (
-    <div>
-      {letra}
-    </div>
+    cargando ? 'Cargando...' : <div className="letra">{letra}</div>
   )
 }
 

@@ -5,7 +5,7 @@ import useLetras from '../hooks/useLetras'
 
 const AppLetras = () => {
 
-  const { alerta, letra } = useLetras()
+  const { alerta, letra, cargando } = useLetras()
 
   return (
     <>
@@ -14,6 +14,7 @@ const AppLetras = () => {
       <main>
           {alerta ? <Alerta>{alerta}</Alerta> : 
           letra ? <Letra/> : 
+          cargando ? 'Cargando...' :
           <p className="text-center">Busca letras de tus artistas favoritos</p>
         }
       </main>
